@@ -23,6 +23,9 @@ class MainFragment : BaseFragment<MainFragmentBinding>() {
             btnA.setOnClickListener {
                 mViewModel.login(LoginRequest("bruce", "123456", "brucexxx@163.com"))
             }
+            titleBar.setOnLeftClickListener {
+                requireActivity().finish()
+            }
         }
     }
 }

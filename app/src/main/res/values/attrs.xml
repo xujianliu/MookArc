@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="TitleBar">
+        <!--标题栏文字的设置-->
+        <attr name="titleText" format="string" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension" />
+
+        <!--        右边按钮的显示-->
+        <attr name="rightImage" format="reference" />
+        <attr name="showRight" format="boolean" />
+        <attr name="showRightIsText" format="boolean" />
+        <attr name="rightText" format="string" />
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightTextSize" format="dimension" />
+
+        <!--        左边按钮的显示-->
+        <attr name="showLeftImage" format="boolean" />
+        <attr name="showLeftImageWhite" format="boolean" />
+
+
+        <attr name="titleBarBgColor" format="color" />
+    </declare-styleable>
+    <item name="triggerDelayKey" type="id"/>
+    <item name="triggerLastTimeKey" type="id"/>
+</resources>

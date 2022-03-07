@@ -1,13 +1,12 @@
 package com.mook.arc.base
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.*
 import androidx.viewbinding.ViewBinding
 import java.lang.reflect.ParameterizedType
 
@@ -27,6 +26,7 @@ open class BaseFragment<_ViewBinding : ViewBinding> : Fragment() {
 //        getSharedPreferences(Constants.sharedPreference_name, Context.MODE_PRIVATE)
 //    }
     private var _mBinding: _ViewBinding? = null
+
 
     fun getBinding(): _ViewBinding {
         return _mBinding!!
@@ -49,9 +49,9 @@ open class BaseFragment<_ViewBinding : ViewBinding> : Fragment() {
             )
             _mBinding = method.invoke(null, inflater, container, false) as _ViewBinding
 
-            viewLifecycleOwner.lifecycle.addObserver(object : LifecycleObserver {
-                @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-                fun onDestroyView() {
+            viewLifecycleOwner.lifecycle.addObserver(object : DefaultLifecycleObserver {
+                override fun onDestroy(owner: LifecycleOwner) {
+                    super.onDestroy(owner)
                     //fragment 销毁时要销毁binding
                     _mBinding = null
                 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <RelativeLayout
+        android:id="@+id/rlBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_setting_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingEnd="@dimen/dp_14"
+            android:textColor="#ff25c29b"
+            android:textSize="17sp"
+            app:drawableStartCompat="@drawable/icon_back" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tBtvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#181818"
+        android:ellipsize="end"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        tools:text="Title" />
+
+    <RelativeLayout
+        android:id="@+id/rlRight"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/dp_45"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="右边的文字"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

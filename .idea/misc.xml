@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/bruce/AndroidStudioProjects/MookArc/app/src/main/res/layout/main_activity.xml" value="0.18645833333333334" />
-        <entry key="..\:/Users/bruce/AndroidStudioProjects/MookArc/app/src/main/res/layout/main_fragment.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/bruce/AndroidStudioProjects/MookArc/app/src/main/res/layout/main_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/bruce/AndroidStudioProjects/MookArc/app/src/main/res/layout/title_bar.xml" value="0.18645833333333334" />
       </map>
     </option>
   </component>
